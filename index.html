@@ -13,7 +13,7 @@
     <!--Autor de la pagina-->
     <meta name="autor" content="Camilo Andres Gomez Rativa">
     <!--Hoja de estilos de la pagina-->
-    <link rel="stylesheet" href="Estilos_TG.css">
+    <link rel="stylesheet" href="css/Estilos_TG.css">
     <!--Titulo de la pagina-->
     <title>TeeGomix</title>
     <!--Icono de la pagina-->
@@ -25,9 +25,20 @@
 
 
 <body>
+    <!-- Botón de menú hamburguesa para móviles -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!--Overlay para el menu abierto-->
+    <div class="menu_overlay" id="menu_overlay"></div>
+
     <section class="sidebar">
         <!--Barra lateral-->
-        <div class="menu_overlay" id="menu_overlay"></div>
+        
             <nav class="slidebar_menu" id="slidebar_menu">
                 <!--Logo representativo de la pagina-->
                 <div>
@@ -65,95 +76,99 @@
 
 
 
-    <!--Seccion de la barra de accesos superior-->
-    <section class="acces_bar">
-        <div class="header">
-            <!--Contenedor para el logo-->
-            <div class="logo_container">
-                <!--logo-->
-                <h1><div class="logo" value="logo" aria-label="Nombre de la pagina TeeGomix"></div></h1>
-
-            </div>
-
-            <!--Barra de busqueda-->
-            <div class="search_container">
-                <input type="text" class="search_bar" placeholder="Buscar...">
-            </div>
-            <!--Contenedor botones-->
-            <div class="container_buttons">
-                <!--botones de acceso-->
-                <button class="btn cart_tg"><a href="#" rel="noopener noreferrer nofollow" aria-label="Enlace que lleva al carrito de compras">Carrito </a></button>
-                <button class="btn login"><a href="Login_TG/Login_TG.html" rel="nooperer noreferrer nofollow" aria-label="Enlace que lleva al inicio de sesion"> Iniciar Sesion</a></button>
-            </div>
-
-        </div>
-    </section> 
-
-
-    <main class="principal_content">
-        <!--Seccion de imagenes, menu de deslizamiento-->
-        <section class="visual_image">
+    <div class="page-wrapper">
+        <!--Seccion de la barra de accesos superior-->
+        <section class="acces_bar">
+            <div class="header">
+                <!--Contenedor para el logo-->
+                <div class="logo_container">
+                    <!--logo-->
+                    <h1><div class="logo" value="logo" aria-label="Nombre de la pagina TeeGomix"></div></h1>
+                
+                </div>
             
-            <div class="slider_content">
-                <div class="slider" reverse="true" style="
-                --width: 550px;
-                --height: 500px;
-                --quantity: 7;">
-                    <div class="list">
-                        <div class="item" style="--position: 1"><img src="images/Gato_2025_TG.png" alt=""></div>
-                        <div class="item" style="--position: 2"><img src="images/Dandadan2_2025_TG.png" alt=""></div>
-                        <div class="item" style="--position: 3"><img src="images/Dandadan_2025_TG.png" alt=""></div>
-                        <div class="item" style="--position: 4"><img src="images/Mascara_Oni_2025_TG.png" alt=""></div>
-                        <div class="item" style="--position: 5"><img src="Images/Mario_2025_TG.png" alt=""></div>
-                        <div class="item" style="--position: 6"><img src="images/Oso_Neon_2025_TG.png" alt=""></div>
-                        <div class="item" style="--position: 7"><img src="images/Tigre_2025_TG.png" alt=""></div>
+                <!--Barra de busqueda-->
+                <div class="search_container">
+                    <input type="text" class="search_bar" placeholder="Buscar...">
+                </div>
+                <!--Contenedor botones-->
+                <div class="container_buttons">
+                    <!--botones de acceso-->
+                    <button class="btn cart_tg"><a href="#" rel="noopener noreferrer nofollow" aria-label="Enlace que lleva al carrito de compras">Carrito </a></button>
+                    <button class="btn login"><a href="Login_TG/Login_TG.html" rel="nooperer noreferrer nofollow" aria-label="Enlace que lleva al inicio de sesion"> Iniciar Sesion</a></button>
+                </div>
+            
+            </div>
+        </section> 
+    
+    
+        <main class="principal_content">
+            <!--Seccion de imagenes, menu de deslizamiento-->
+            <section class="visual_image">
+                
+                <div class="slider_content">
+                    <div class="slider" reverse="true" style="
+                    --width: 550px;
+                    --height: 500px;
+                    --quantity: 7;">
+                        <div class="list">
+                            <div class="item" style="--position: 1"><img src="images/Gato_2025_TG.png" alt=""></div>
+                            <div class="item" style="--position: 2"><img src="images/Dandadan2_2025_TG.png" alt=""></div>
+                            <div class="item" style="--position: 3"><img src="images/Dandadan_2025_TG.png" alt=""></div>
+                            <div class="item" style="--position: 4"><img src="images/Mascara_Oni_2025_TG.png" alt=""></div>
+                            <div class="item" style="--position: 5"><img src="Images/Mario_2025_TG.png" alt=""></div>
+                            <div class="item" style="--position: 6"><img src="images/Oso_Neon_2025_TG.png" alt=""></div>
+                            <div class="item" style="--position: 7"><img src="images/Tigre_2025_TG.png" alt=""></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                    
                 
-            
-        </section>
-
-
-
-        <!-- Seccion de informacion sobre nosotros y nuestros servicios-->
-        <section class="about">
-            <div class="frame">
-                <fieldset class="frames">
-                    <legend class="legend">Nosotros | Servicios</legend>
-                        <p class="our">Te ayudamos a lucir más relajado y a la moda con diseños únicos.
-                        <br><br>
-                
-                        En <strong class="name_com">TeeGomix</strong>, nos dedicamos a ofrecer las mejores camisetas y buzos con diseños únicos y personalizados. Nos     apasiona que  nuestros clientes puedan expresar su estilo y personalidad a través de lo que visten, por eso, nos especializamos en crear prendas que reflejen su identidad. Cada uno de nuestros productos está diseñado con cuidado y atención al detalle, asegurándonos de que nuestros clientes reciban algo que sea cómodo y auténtico.
-                        <br><br>
-                
-                        Nos enfocamos en brindar una experiencia inigualable, donde tú eres quien elige el mejor estilo. Además de nuestros diseños, ofrecemos opciones de personalización para cada camiseta o buzo que elijas. Puedes elegir desde el color, el material, hasta el diseño, todo depende de tu imaginación, nosotros nos encargamos de colocarlo a tu alcance.
-                        <br><br>
-                
-                        En nombre de TeeGomix podemos decir que tenemos todo lo que necesitas. Estamos seguros de que cada prenda se debe adaptar a ti, no solo en estilo, sino también en el confort y ajuste.
-                </fieldset>
-            </div>
-        </section>
-
-
-
-    </main>
-
-
-
-    <footer>
-        <!--Seccion sobre los datos de contacto y soporte-->
-        <section class="final">
-            <div class="frame">
-                <fieldset class="frames">
-                    <legend class="legend">Contacto | Soporte</legend>
-                </fieldset>
-            </div>
-        </section>
+            </section>
+        
+        
+        
+            <!-- Seccion de informacion sobre nosotros y nuestros servicios-->
+            <section class="about">
+                <div class="frame">
+                    <fieldset class="frames">
+                        <legend class="legend">Nosotros | Servicios</legend>
+                            <p class="our">Te ayudamos a lucir más relajado y a la moda con diseños únicos.
+                            <br><br>
+                            
+                            En <strong class="name_com">TeeGomix</strong>, nos dedicamos a ofrecer las mejores camisetas y buzos con diseños únicos y personalizados. Nos     apasiona que  nuestros clientes puedan expresar su estilo y personalidad a través de lo que visten, por eso, nos especializamos en crear prendas que reflejen su identidad. Cada uno de nuestros productos está diseñado con cuidado y atención al detalle, asegurándonos de que nuestros clientes reciban algo que sea cómodo y auténtico.
+                            <br><br>
+                            
+                            Nos enfocamos en brindar una experiencia inigualable, donde tú eres quien elige el mejor estilo. Además de nuestros diseños, ofrecemos opciones de personalización para cada camiseta o buzo que elijas. Puedes elegir desde el color, el material, hasta el diseño, todo depende de tu imaginación, nosotros nos encargamos de colocarlo a tu alcance.
+                            <br><br>
+                            
+                            En nombre de TeeGomix podemos decir que tenemos todo lo que necesitas. Estamos seguros de que cada prenda se debe adaptar a ti, no solo en estilo, sino también en el confort y ajuste.
+                    </fieldset>
+                </div>
+            </section>
+        
+        
+        
+        </main>
     
-    </footer>
+    
+    
+        <footer>
+            <!--Seccion sobre los datos de contacto y soporte-->
+            <section class="final">
+                <div class="frame">
+                    <fieldset class="frames">
+                        <legend class="legend">Contacto | Soporte</legend>
+                    </fieldset>
+                </div>
+            </section>
+            
+        </footer>
     
         
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
