@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebarMenu = document.getElementById('slidebar_menu');
-    const menuOverlay = document.getElementById('menu_overlay');
+    const menuToggle = document.getElementById('menu__toggle');
+    const sidebarMenu = document.getElementById('sidebar__menu');
+    const menuOverlay = document.getElementById('menu__overlay');
     
     // Función para abrir/cerrar el menú
     function toggleMenu() {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuOverlay.addEventListener('click', toggleMenu);
     
     // Cerrar menú al hacer clic en un enlace en móvil
-    const menuLinks = document.querySelectorAll('.options .item');
+    const menuLinks = document.querySelectorAll('.options .options__item');
     menuLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 900) {

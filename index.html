@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,49 +23,58 @@
 
 
 <body>
-    <!-- Botón de menú hamburguesa para móviles -->
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+    <!--########################################
+    Botón de menú hamburguesa para móviles 900px
+    #########################################-->
+
+    <button class="menu__toggle" id="menu__toggle" aria-label="Abrir menú">
         <span></span>
         <span></span>
         <span></span>
     </button>
 
 
-    <!--Overlay para el menu abierto-->
-    <div class="menu_overlay" id="menu_overlay"></div>
+    <!--########################
+    Overlay para el menu abierto
+    #########################-->
+
+    <div class="menu__overlay" id="menu__overlay"></div>
+
+
+    <!--##############################
+    Seccion Barra lateral de accesos
+    ###############################-->
 
     <section class="sidebar">
-        <!--Barra lateral-->
-        
-            <nav class="slidebar_menu" id="slidebar_menu">
+            <nav class="sidebar__menu" id="sidebar__menu">
                 <!--Logo representativo de la pagina-->
                 <div>
-                    <img class="logo_sidebar"src="Images/Logo.png" alt="logo TeeGomix">
+                    <img class="logo__sidebar"src="Images/Logo.png" alt="logo TeeGomix">
                 </div>
 
                 <!--Redireccion al inicio de la pagina -->
                 <div class="options">
-                    <a href="#" class="item">Inicio</a>
+                    <a href="#" class="options__item">Inicio</a>
                 </div>
 
                 <!--Redireccion a la informacion de nosotros -->
                 <div class="options">
-                    <a href="#" class="item">Nosotros</a>
+                    <a href="#" class="options__item">Nosotros</a>
                 </div>
 
                 <!--Redireccion a nuestros servicios -->
                 <div class="options">
-                    <a href="#" class="item">Servicios</a>
+                    <a href="#" class="options__item">Servicios</a>
                 </div>
 
                 <!--Redireccion al catalogo descargable -->
                 <div class="options">
-                    <a href="#" class="item">Catalogo</a>
+                    <a href="#" class="options__item">Catalogo</a>
                 </div>
 
                 <!--Redireccion a la informacion de contacto -->
                 <div class="options">
-                    <a href="#" class="item">Contacto</a>
+                    <a href="#" class="options__item">Contacto</a>
                 </div>
 
                 
@@ -76,15 +83,14 @@
 
 
 
-    <div class="page-wrapper">
+    <div class="page_wrapper">
         <!--Seccion de la barra de accesos superior-->
         <section class="acces_bar">
-            <div class="header">
+            <div class="acces_bar__header">
                 <!--Contenedor para el logo-->
                 <div class="logo_container">
                     <!--logo-->
-                    <h1><div class="logo" value="logo" aria-label="Nombre de la pagina TeeGomix"></div></h1>
-                
+                    <h1><div class="logo_container__logo" value="logo" aria-label="Nombre de la pagina TeeGomix"></div></h1>
                 </div>
             
                 <!--Barra de busqueda-->
@@ -94,8 +100,8 @@
                 <!--Contenedor botones-->
                 <div class="container_buttons">
                     <!--botones de acceso-->
-                    <button class="btn cart_tg"><a href="#" rel="noopener noreferrer nofollow" aria-label="Enlace que lleva al carrito de compras">Carrito </a></button>
-                    <button class="btn login"><a href="Login_TG/Login_TG.html" rel="nooperer noreferrer nofollow" aria-label="Enlace que lleva al inicio de sesion"> Iniciar Sesion</a></button>
+                    <button class="container_buttons__btn"><a href="#" rel="noopener noreferrer nofollow" aria-label="Enlace que lleva al carrito de compras">Carrito </a></button>
+                    <button class="container_buttons__btn"><a href="Login_TG/Login_TG.html" rel="nooperer noreferrer nofollow" aria-label="Enlace que lleva al inicio de sesion"> Iniciar Sesion</a></button>
                 </div>
             
             </div>
@@ -107,7 +113,7 @@
             <section class="visual_image">
                 
                 <div class="slider_content">
-                    <div class="slider" reverse="true" style="
+                    <div class="slider_content__slider" reverse="true" style="
                     --width: 550px;
                     --height: 500px;
                     --quantity: 7;">
