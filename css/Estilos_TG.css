@@ -46,6 +46,7 @@ Botón hamburguesa para menú móvil 900px
     cursor: pointer;
     width: 30px;
     height: 30px;
+    will-change: transform;
 }
 
 .menu__toggle span {
@@ -56,6 +57,7 @@ Botón hamburguesa para menú móvil 900px
     margin: 6px 0;
     transition: 0.4s;
     border-radius: 3px;
+    will-change: transform, opacity;
     
 }
 /*Diseño overlay menu abierto*/
@@ -69,6 +71,7 @@ Botón hamburguesa para menú móvil 900px
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1005; /* Entre la barra lateral y el resto del contenido */
     backdrop-filter: blur(3px);
+    will-change: opacity;
 }
 /* Animación para el botón hamburguesa */
 .menu__toggle.open span:nth-child(1) {
@@ -111,13 +114,15 @@ nav.sidebar__menu{
     font-size: 15px;
     z-index: 1010;
     transition: all 0.3s ease;
+    will-change: transform, left;
 }
 
 nav .logo__sidebar{
     padding-top: 40px;
     padding-bottom: 10px;
-    width: 200px;
-    height: 220px;
+    max-width: 200px;
+    max-height:220px;
+    object-fit: contain;
     margin: 0 auto;
     border-radius: 50%;
     filter: drop-shadow(0 0 4px #00BFFF); /*Sombra para el logo en png*/
@@ -138,6 +143,7 @@ nav .options__item{
     transition: all 0.3s ease;
     background-color: transparent;
     cursor: pointer;
+    will-change: transform, box-shadow;
 }
 nav .options__item:hover {
     background:  #00ffff05;
@@ -154,6 +160,7 @@ nav .options__item::before {
     height: 100%;
     background: linear-gradient(90deg, transparent, #00ffff05, transparent);
     transition: 0.5s;
+    will-change: transform;
 }
 
 nav .options__item:hover::before {
@@ -217,6 +224,7 @@ Estilos barra superior
     padding: 10px;
     filter: drop-shadow(0 0 5px #00ffff); /*Sombra para el logo en png*/
     display: block;
+    will-change: filter;
 }
 
 /*#######################
@@ -239,6 +247,7 @@ Estilos barra de busqueda
     outline: none;
     transition: all 0.3s ease;
     margin-left: 35px;
+    will-change: border-color, box-shadow;
 }
 .search_bar::placeholder {
     color: #00BFFF;
@@ -273,7 +282,7 @@ Estilos botones superiores derecha
     padding: 0 12px;
     cursor: pointer;/*Al pasar el cursor por el boton cambia su icono*/
     font-size: 12px;
-    
+    will-change: background-color, border-color, box-shadow;
 }
 .container_buttons__btn:hover{
     background:  #00ffff05;
@@ -303,7 +312,7 @@ Estilos slider de imagenes
     overflow: hidden;
     z-index: 1;
     box-sizing: border-box;
-
+    will-change: transform;
 }
 
 .slider_content__slider{
@@ -321,6 +330,7 @@ Estilos slider de imagenes
     min-width: calc(var(--width) * var(--quantity));
     position: relative;
     height: 100%;
+    will-change: transform;
 }
 
 .slider_content__slider .list .item{
@@ -332,6 +342,7 @@ Estilos slider de imagenes
     transition: filter 0.5s;
     animation-delay: calc((10s/var(--quantity))*(var(--position) - 1))!important;
     overflow: hidden;
+    will-change: transform, filter;
 }
 .slider_content__slider .list .item img{
     height: 100%;      
@@ -340,6 +351,7 @@ Estilos slider de imagenes
     max-width: 850px;   
     padding-top: 20px;
     object-fit: contain;
+    will-change: transform;
 }
 @keyframes autoRun{
     from{
@@ -523,3 +535,4 @@ Media queries para hacer la página responsiva
         --height: 400px !important;
     }
 }
+
