@@ -1,0 +1,497 @@
+
+/*##############################
+PALETA DE COLORES PARA LA PAGINA
+##############################*/
+:root {
+    /* Colores principales */
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-blue: #00BFFF;
+    --color-purple: #6600c5;
+    --color-purple-dark: #5300a0;
+    --color-grey: #808080;
+    --color-light-grey: #d3d3d3;
+    --color-silver: #a7a7a7;
+    --color-mid-grey: #757575;
+    --color-neon: #00e0ff;
+
+    /* Tonos de texto */
+    --color-text-primary: var(--color-white);
+    --color-text-secondary: var(--color-grey);
+    --color-text-light: var(--color-silver);
+    --color-text-accent: var(--color-blue);
+
+    /* Sombras y efectos */
+    --shadow-white: 0 0 6px var(--color-white);
+    --shadow-blue: 0 0 15px var(--color-blue);
+    --shadow-light: 0 0 10px rgba(255, 255, 255, 0.4);
+    --shadow-neon: 0 0 12px #00e0ff;
+
+    /* Gradientes */
+    --gradient-signing: linear-gradient(to right,
+            var(--color-blue),
+            #7f42a7,
+            var(--color-purple),
+            var(--color-purple-dark),
+            var(--color-mid-grey),
+            var(--color-blue));
+}
+
+
+
+/*##################################
+CONFIGURACIONES DE LA VISTA COMPLETA
+##################################*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    scroll-behavior: smooth; /* Scroll suave */
+}
+
+/* Logo Contenedor nombre pagina*/
+.logo_container__logo {
+    aspect-ratio: 16/9;
+    width: 230px;
+    height: 90px;
+    background-image: url(../../Assets/Images/TeeGomix.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*No repetir el logo en caso de que no ocupe el espacio completo del bloque*/
+    background-position: center;
+    padding: 10px;
+    filter: drop-shadow(var(--shadow-white));
+    /*Sombra para el logo en png*/
+    display: block;
+    will-change: filter;
+}
+
+.nav_var {
+    text-shadow: 2px 2px 6px var(--color-white);
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+    color: var(--color-blue);
+}
+
+.nav_var ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav_var a {
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    color: var(--color-light);
+    z-index: 999;
+    gap: 10px;
+}
+
+
+.nav_var a:hover {
+    color: var(--color-text-light);
+    transform: translateY(-2px);
+}
+
+
+/* Estilo para los íconos PNG */
+.icon-nav {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0.8) invert(63%) sepia(97%) saturate(1800%) hue-rotate(160deg);
+    transition: filter 0.3s ease, transform 0.3s ease;
+
+}
+
+/* Efecto hover: brillo tipo neón */
+.nav_bar a:hover .icon-nav {
+    filter: brightness(1.5) invert(60%) sepia(10%) saturate(1000%) hue-rotate(180deg);
+    transform: scale(1.2);
+}
+
+
+/* Estilo a la imagen degrade div-layer-blur*/
+
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px var(--color-white);
+    /*Efecto de brillo*/
+    rotate: -30deg;
+    z-index: -1;
+}
+
+
+/* SECCIÓN HERO - Primera pantalla completa */
+.hero-section {
+    width: 100%;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    background-color: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para Safari */
+}
+
+
+
+.btn-registered {
+    background-color: color-mix(in srgb, var(--color-text-light) 30%, transparent 70%);
+    color: var(--color-blue);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+.btn-registered:hover {
+    background-color: color-mix(in srgb, var(--color-white) 30%, transparent 30%);
+    color: var(--color-text-light);
+    box-shadow: 0 0 8px var(--color-neon);
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; /* Ocupa el espacio restante después del header */
+    padding-top: 120px; /* Espacio para compensar el header fijo */
+}
+
+
+.content {
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+
+.btn-signing {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: var(--gradient-signing);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: var(--shadow-light);
+}
+
+@keyframes animationGradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+.btn-signing .tag {
+    color: var(--color-blue);
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: var(--color-black);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+
+.btn-signing .tag:hover {
+    color: var(--color-purple-dark);
+}
+
+
+.content h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.42);
+}
+
+.description {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: var(--color-text-secondary);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.btn-about {
+    text-decoration: none;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+
+.btn-about:hover {
+    background-color: #1a1a1a;
+}
+
+
+.btn-registered-main {
+    text-decoration: none;
+    background-color: var(--color-light-grey);
+    color: var(--color-black);
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+
+.btn-registered-main:hover {
+    background-color: var(--color-grey);
+}
+
+
+.robot-3d {
+    position: absolute;
+    top: 0;
+    right: -20%;
+}
+
+
+
+/*########################
+SECCIÓN ACERCA DE NOSOTROS
+########################*/
+
+.about-section {
+    width: 100%;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem; /* Espacio entre imagen y contenido */
+    padding: 4rem 2rem;
+    background: radial-gradient(circle at top left,
+            rgba(0, 191, 255, 0.096),
+            transparent 30%),
+        var(--color-black);
+    color: var(--color-text-grey);
+    text-align: center;
+    position: relative; /* Para evitar problemas de scroll */
+}
+
+.about-image {
+    flex: 0 0 auto;
+    max-width: 600px; /* Ancho máximo similar al robot */
+    width: 52%; /* Ancho relativo */
+    margin-left: 15px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.3)); /* Efecto de brillo */
+}
+
+.about-content {
+    max-width: 600px;
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 3px var(--color-blue);
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+
+
+/* CONSULTAS DE MEDIOS */
+
+@media (max-width:1300px) {
+    header {
+        padding: 1rem 0.5rem;
+
+    }
+
+    .content {
+        margin-top: 85%;
+    }
+
+    .robot-3d {
+        scale: 0.8;
+        top: -20%;
+        right: 2%;
+    }
+
+    .about-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-image {
+        max-width: 400px;
+        width: 60%;
+    }
+}
+
+
+
+@media(max-width: 768px) {
+    header {
+        padding: 1rem 0.1rem;
+    }
+
+    .nav_var {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .btn-signing {
+        padding: 0.6rem 1.5rem;
+    }
+
+    .content {
+        margin-top: 25rem;
+    }
+
+    .robot-3d {
+        scale: 0.5;
+        top: -25%;
+        right: 0;
+    }
+
+    .content {
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+
+    .btn-signing {
+        width: 12rem;
+    }
+
+    .content h2 {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .btn-about {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .btn-registered-main {
+        font-size: 0.8rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .about-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .about-image {
+        max-width: 300px;
+        width: 80%;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+}

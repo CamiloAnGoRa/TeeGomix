@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | TeeGomix</title>
+    <link rel="stylesheet" href="styles/login_style.css">
+    <link rel="icon" href="../Assets/Images/Ner_Logo_R_Bag.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Imagen degradada -->
+    <img class="image-gradient" src="../Assets/Images/gradient.png" alt="gradient">
+
+    <div class="login-container">
+        <!-- Panel izquierdo -->
+        <div class="login-left">
+            <div class="overlay"></div>
+            <div class="text-content">
+                <h1>Bienvenido de nuevo</h1>
+                <p>Nos alegra verte otra vez. Ingresa para continuar personalizando tu estilo.</p>
+            </div>
+        </div>
+
+        <!-- Panel derecho -->
+        <div class="login-right">
+            <h2>Iniciar Sesión</h2>
+
+            <form class="login-form" id="login-form">
+                <div class="input-group">
+                    <label for="email">Correo electrónico</label>
+                    <div class="input-wrapper">
+                        <img src="../Assets/Images/email.png" alt="icono correo" class="input-icon">
+                        <input type="email" id="email" placeholder="tu@correo.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <div class="input-wrapper">
+                        <img src="../Assets/Images/password.png" alt="icono contraseña" class="input-icon">
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <img src="../Assets/Images/Ocultar.png" alt="Mostrar contraseña" class="toggle-password" id="togglePassword">
+                    </div>
+                </div>
+
+                <div class="options">
+                    <label class="checkbox">
+                        <input type="checkbox" id="remember"> Recordarme
+                    </label>
+                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn-login">Iniciar Sesión</button>
+
+                <div class="divider">o continúa con</div>
+
+                <div class="social-buttons">
+                    <button type="button" class="social-btn google">
+                        <img src="../Assets/Images/google.png" alt="Google" class="social-icon">
+                        Continuar con Google
+                    </button>
+                    <button type="button" class="social-btn apple">
+                        <img src="../Assets/Images/apple.png" alt="Apple" class="social-icon">
+                        Continuar con Apple
+                    </button>
+                </div>
+
+                <p class="register-link">¿No tienes una cuenta? <a href="register.html">Regístrate</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../Controller/login_controller.js"></script>
+</body>
+
+</html>

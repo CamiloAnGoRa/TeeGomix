@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | TeeGomix</title>
+    <link rel="stylesheet" href="styles/catalogo_style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="../Assets/Images/Ner_Logo_R_Bag.png" type="image/png">
+</head>
+
+<body>
+    <!-- Imagen de gradiente de fondo -->
+    <img class="image-gradient" src="../Assets/Images/gradient.png" alt="gradient">
+
+    <!-- HEADER FIJO -->
+    <header class="catalog-header">
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
+
+        <nav class="catalog-nav">
+            <a href="#camisetas" class="nav-link active">
+                <span class="icon">👕</span>
+                CAMISETAS
+            </a>
+            <a href="#sacos" class="nav-link">
+                <span class="icon">🧥</span>
+                SACOS
+            </a>
+            <a href="#personalizados" class="nav-link">
+                <span class="icon">✨</span>
+                PERSONALIZADOS
+            </a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="icon-btn" id="cart-btn">
+                🛒
+                <span class="badge" id="cart-count">0</span>
+            </button>
+            <button class="icon-btn" id="favorites-btn">
+                ❤️
+                <span class="badge" id="favorites-count">0</span>
+            </button>
+            <button class="btn-logout" id="logout-btn">Cerrar Sesión</button>
+        </div>
+
+        <!-- Botón menú móvil -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+    </header>
+
+    <!-- BOTÓN FILTROS (MÓVIL) -->
+    <button class="filter-toggle-btn" id="filter-toggle">
+        🔍 Filtros
+    </button>
+
+    <!-- SIDEBAR FILTROS -->
+    <aside class="filters-sidebar" id="filters-sidebar">
+        <div class="filters-header">
+            <h3>Filtros</h3>
+            <button class="close-filters" id="close-filters">✕</button>
+        </div>
+
+        <div class="filter-section">
+            <h4>Precio</h4>
+            <div class="price-range">
+                <input type="range" id="price-min" min="0" max="200000" value="0" step="5000">
+                <input type="range" id="price-max" min="0" max="200000" value="200000" step="5000">
+                <div class="price-labels">
+                    <span>$<span id="price-min-label">0</span></span>
+                    <span>$<span id="price-max-label">200000</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h4>Colores</h4>
+            <div class="color-filters">
+                <label class="color-option">
+                    <input type="checkbox" value="negro">
+                    <span class="color-circle" style="background: #000;"></span>
+                    Negro
+                </label>
+                <label class="color-option">
+                    <input type="checkbox" value="blanco">
+                    <span class="color-circle" style="background: #fff; border: 1px solid #333;"></span>
+                    Blanco
+                </label>
+                <label class="color-option">
+                    <input type="checkbox" value="azul">
+                    <span class="color-circle" style="background: #00BFFF;"></span>
+                    Azul
+                </label>
+                <label class="color-option">
+                    <input type="checkbox" value="rojo">
+                    <span class="color-circle" style="background: #ff0000;"></span>
+                    Rojo
+                </label>
+                <label class="color-option">
+                    <input type="checkbox" value="verde">
+                    <span class="color-circle" style="background: #00ff00;"></span>
+                    Verde
+                </label>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h4>Material</h4>
+            <label class="checkbox-option">
+                <input type="checkbox" value="algodon">
+                <span class="checkbox-text">Algodón</span>
+            </label>
+            <label class="checkbox-option">
+                <input type="checkbox" value="poliester">
+                <span class="checkbox-text">Poliéster</span>
+            </label>
+            <label class="checkbox-option">
+                <input type="checkbox" value="mezcla">
+                <span class="checkbox-text">Mezcla</span>
+            </label>
+        </div>
+
+        <div class="filter-section">
+            <h4>Servicios</h4>
+            <label class="checkbox-option">
+                <input type="checkbox" value="personalizable">
+                <span class="checkbox-text">Personalizable</span>
+            </label>
+            <label class="checkbox-option">
+                <input type="checkbox" value="stock">
+                <span class="checkbox-text">En Stock</span>
+            </label>
+            <label class="checkbox-option">
+                <input type="checkbox" value="oferta">
+                <span class="checkbox-text">En Oferta</span>
+            </label>
+        </div>
+
+        <button class="btn-apply-filters">Aplicar Filtros</button>
+        <button class="btn-clear-filters">Limpiar Todo</button>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="catalog-main">
+        
+        <!-- HERO - PRODUCTO TENDENCIA -->
+        <section class="hero-product" data-aos="fade-up">
+            <div class="hero-content">
+                <span class="hero-badge">⭐ TENDENCIA DE LA SEMANA</span>
+                <h1>Coleccion Urbana - Geek</h1>
+                <p>Diseños exclusivos que definen tu personalidad</p>
+                <button class="btn-hero">Explorar Ahora</button>
+            </div>
+            <div class="hero-image">
+                <!-- AQUÍ VA TU IMAGEN DEL PRODUCTO TENDENCIA -->
+                <img src="../Assets/Images/Camisetas/hero.jpg" alt="Producto Tendencia">
+            </div>
+        </section>
+
+        <!-- PRODUCTOS VARIADOS -->
+        <section class="products-section" id="camisetas">
+            <h2 data-aos="fade-right">Nuestros Productos</h2>
+            
+            <div class="products-grid">
+                <!-- TARJETA 1 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-inner">
+                        <!-- FRENTE -->
+                        <div class="card-front">
+                            <img src="../Assets/Images/Camisetas/Dandadan2_2025_TG.png" alt="Producto 1">
+                            <div class="product-overlay">
+                                <h3>Camiseta Anime</h3>
+                                <p class="price">$45,000</p>
+                            </div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card-back">
+                            <h3>Camiseta Anime</h3>
+                            <p class="specs">
+                                • Material: Algodón 100%<br>
+                                • Tallas: S, M, L, XL<br>
+                                • Colores: Negro, Blanco<br>
+                                • Personalizable: Sí
+                            </p>
+                            <p class="price-detail">$45,000 COP</p>
+                            <div class="card-actions">
+                                <button class="btn-add-cart">🛒 Añadir</button>
+                                <button class="btn-favorite">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 2 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="../Assets/Images/Camisetas/Dandadan_2025_TG.png" alt="Producto 2">
+                            <div class="product-overlay">
+                                <h3>Camiseta Anime V2</h3>
+                                <p class="price">$85,000</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Camiseta Anime V2</h3>
+                            <p class="specs">
+                                • Material: Mezcla Premium<br>
+                                • Tallas: S, M, L, XL<br>
+                                • Colores: Negro, Gris<br>
+                                • Personalizable: Sí
+                            </p>
+                            <p class="price-detail">$85,000 COP</p>
+                            <div class="card-actions">
+                                <button class="btn-add-cart">🛒 Añadir</button>
+                                <button class="btn-favorite">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 3 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="../Assets/Images/Camisetas/Gato_2025_TG.png" alt="Producto 3">
+                            <div class="product-overlay">
+                                <h3>Camiseta Oversize</h3>
+                                <p class="price">$120,000</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Camiseta Oversize</h3>
+                            <p class="specs">
+                                • Material: Poliéster<br>
+                                • Tallas: M, L, XL<br>
+                                • Colores: Negro, Azul<br>
+                                • Personalizable: No
+                            </p>
+                            <p class="price-detail">$120,000 COP</p>
+                            <div class="card-actions">
+                                <button class="btn-add-cart">🛒 Añadir</button>
+                                <button class="btn-favorite">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 4 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="../Assets/Images/Camisetas/Mario_2025_TG.png" alt="Producto 4">
+                            <div class="product-overlay">
+                                <h3>Camiseta Básica</h3>
+                                <p class="price">$35,000</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Camiseta Básica</h3>
+                            <p class="specs">
+                                • Material: Algodón<br>
+                                • Tallas: S, M, L, XL, XXL<br>
+                                • Colores: Varios<br>
+                                • Personalizable: Sí
+                            </p>
+                            <p class="price-detail">$35,000 COP</p>
+                            <div class="card-actions">
+                                <button class="btn-add-cart">🛒 Añadir</button>
+                                <button class="btn-favorite">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agrega más tarjetas según necesites -->
+            </div>
+        </section>
+
+        <!-- PRODUCTOS PERSONALIZADOS -->
+        <section class="custom-products-section" id="personalizados">
+            <h2 data-aos="fade-right">Diseños Personalizados</h2>
+            <p class="section-subtitle" data-aos="fade-right">Proyectos únicos creados para nuestros clientes</p>
+            
+            <div class="custom-grid">
+                <!-- CUSTOM 1 -->
+                <div class="custom-card" data-aos="flip-left" data-aos-delay="100">
+                    <img src="../Assets/Images/Camisetas/Oso_Neon_2025_TG.png" alt="Personalizado 1">
+                    <div class="custom-overlay">
+                        <h4>Proyecto Corporativo</h4>
+                        <p>Diseño exclusivo para empresa</p>
+                    </div>
+                </div>
+
+                <!-- CUSTOM 2 -->
+                <div class="custom-card" data-aos="flip-left" data-aos-delay="200">
+                    <img src="../Assets/Images/Camisetas/Tigre_2025_TG.png" alt="Personalizado 2">
+                    <div class="custom-overlay">
+                        <h4>Colección Limitada</h4>
+                        <p>Serie especial de 50 unidades</p>
+                    </div>
+                </div>
+
+                <!-- CUSTOM 3 -->
+                <div class="custom-card" data-aos="flip-left" data-aos-delay="300">
+                    <img src="../Assets/Images/Camisetas/Yoshi_2025_TG.png" alt="Personalizado 3">
+                    <div class="custom-overlay">
+                        <h4>Evento Geek</h4>
+                        <p>Culturas Geeks</p>
+                    </div>
+                </div>
+
+                <!-- CUSTOM 4 -->
+                <div class="custom-card" data-aos="flip-left" data-aos-delay="400">
+                    <img src="../Assets/Images/Camisetas/Mascara_Oni_2025_TG.png" alt="Personalizado 4">
+                    <div class="custom-overlay">
+                        <h4>Edición Artista</h4>
+                        <p>Colaboración especial</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-custom-request" data-aos="zoom-in">
+                Solicita tu Diseño Personalizado
+            </button>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="catalog-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TeeGomix</h3>
+                <p>Tu mejor estilo, tu identidad.</p>
+                <p>Diseños únicos y personalizados.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <a href="../index.html">Inicio</a>
+                <a href="#camisetas">Productos</a>
+                <a href="#personalizados">Personaliza</a>
+                <a href="#">Acerca de</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Soporte</h4>
+                <a href="#">Preguntas Frecuentes</a>
+                <a href="#">Envíos</a>
+                <a href="#">Devoluciones</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📷 Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 TeeGomix. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="../Controller/catalogo_controller.js"></script>
+</body>
+
+</html>

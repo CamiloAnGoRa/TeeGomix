@@ -1,0 +1,316 @@
+:root {
+    --color-bg-dark: #000000;
+    --color-accent: #00eaff;
+    --color-light: #b2faff;
+    --color-white: #ffffff;
+    --color-text-grey: #a0a0a0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* General */
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-white);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Contenedor principal */
+.login-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 800px;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Panel izquierdo */
+.login-left {
+    flex: 1;
+    background: url("../../Assets/Images/Ner_Logo_R_Bag.png") center/cover no-repeat;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+}
+
+.text-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.text-content h1 {
+    font-size: 2.2rem;
+    color: var(--color-light);
+    text-shadow: 0 0 10px var(--color-accent);
+}
+
+.text-content p {
+    color: var(--color-text-grey);
+    max-width: 250px;
+    font-size: 0.95rem;
+}
+
+/* Panel derecho */
+.login-right {
+    flex: 1;
+    background-color: rgba(15, 15, 20, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-right h2 {
+    color: var(--color-light);
+    text-shadow: 0 0 8px var(--color-accent);
+    margin-bottom: 30px;
+}
+
+/* Formulario */
+.login-form {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-light);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px 14px;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper:hover,
+.input-wrapper:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 8px rgba(0, 224, 255, 0.4);
+}
+
+.input-wrapper input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.input-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    filter: invert(63%) sepia(97%) saturate(1800%) hue-rotate(160deg) brightness(105%) contrast(102%);
+}
+
+/* Ícono de toggle password (derecha) */
+.toggle-password {
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: invert(63%) sepia(97%) saturate(1800%) hue-rotate(160deg) brightness(105%) contrast(102%);
+}
+
+.toggle-password:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Opciones */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-grey);
+}
+
+.forgot-link {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Botón principal */
+.btn-login {
+    background: linear-gradient(90deg, var(--color-accent), #0077ff);
+    border: none;
+    color: var(--color-white);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    box-shadow: 0 0 12px rgba(0, 224, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* Botones sociales */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-accent);
+    padding: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 224, 255, 0.4);
+    border-color: var(--color-accent);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(63%) sepia(97%) saturate(1800%) hue-rotate(160deg) brightness(105%) contrast(102%);
+}
+
+/* Enlace a registro */
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+        max-height: 90vh;
+    }
+
+    .login-left {
+        min-height: 200px;
+    }
+
+    .text-content {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-content p {
+        font-size: 0.85rem;
+    }
+
+    .login-right {
+        padding: 30px 20px;
+    }
+
+    .login-form {
+        max-width: 100%;
+    }
+}

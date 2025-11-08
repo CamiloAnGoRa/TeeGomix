@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeeGomix</title>
+    <link rel="stylesheet" href="Views/styles/main_style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="Assets/Images/Ner_Logo_R_Bag.png" type="image/png">
+</head>
+
+<body>
+    <!-- Imagen gradiante, usada para el efecto cuadricula de la pagina-->
+    <img class="image-gradient" src="Assets/Images/gradient.png" alt="gradient">
+
+    <!--Desenfoque por capa-->
+    <div class="layer-blur"></div>
+
+    <!-- SECCIÓN 1: Hero/Inicio -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <header>
+                <!--
+                ##################### 
+                ########LOGO#########
+                #####################
+                -->
+                <h1 data-aos="fade-down" data-aos-duration="1500">
+                    <div class="logo_container__logo" value="logo" aria-label="Nombre de la pagina TeeGomix"></div>
+                </h1>
+
+                <!--
+                ##################### 
+                #Barra de navegacion#
+                #####################
+                -->
+                <nav class="nav_var">
+                    <ul>
+                        <a href="#hero" data-aos="fade-down" data-aos-duration="1500"><img
+                                src="Assets/Images/inicio.png" alt="Inicio" class="icon-nav">INICIO</a>
+                        <a href="Views/catalogo.html" data-aos="fade-down" data-aos-duration="2000"><img src="Assets/Images/catalogo.png"
+                                alt="Catalogo" class="icon-nav">CATALOGO</a>
+                        <a href="" data-aos="fade-down" data-aos-duration="2500"><img
+                                src="Assets/Images/contactanos.png" alt="Contactanos" class="icon-nav">CONTACTANOS</a>
+                        <a href="" data-aos="fade-down" data-aos-duration="3000"><img src="Assets/Images/carrito.png"
+                                alt="Carrito" class="icon-nav">CARRITO</a>
+                    </ul>
+                </nav>
+
+                <!--
+                ##################### 
+                #BOTON_INI_SESION####
+                #####################
+                -->
+                <button data-aos="fade-down" data-aos-duration="1500" class="btn-registered"
+                    id="btn-register">Registrarse</button>
+            </header>
+
+            <main id="main-id" class="main-section">
+                <div class="content" data-aos="fade-up" data-aos-duration="1500">
+                    <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+                        data-aos-duration="1500" class="btn-signing">
+                        <div class="tag" id="btn-login">Iniciar Sesion &wedbar;</div>
+                    </div>
+
+                    <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+                        data-aos-duration="2000">TU MEJOR <br> ESTILO</h2>
+
+                    <p data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+                        data-aos-duration="2500" class="description">
+                        <strong>TeeGomix: </strong> Más que ropa, es tu lienzo. Te ayudamos a recrear tu mejor estilo
+                        con
+                        prendas de calidad, diseñadas y personalizadas por ti. Expresa tu identidad.
+                    </p>
+
+                    <div class="buttons" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+                        data-aos-offset="0" data-aos-duration="1500">
+                        <a href="#about" class="btn-about">Acerca de nosotros &gt;</a>
+                    </div>
+                </div>
+            </main>
+
+            <spline-viewer class="robot-3d" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+                data-aos-offset="0" data-aos-duration="2500"
+                url="https://prod.spline.design/voiJxyUrU6rhC6vJ/scene.splinecode"></spline-viewer>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: Acerca de Nosotros -->
+    <section id="about" class="about-section">
+        <div class="about-image" data-aos="fade-right" data-aos-duration="1500">
+            <img src="Assets/Images/Acerca_Nosotros.png" alt="Equipo creativo">
+        </div>
+
+        <div class="about-content" data-aos="fade-left" data-aos-duration="1500">
+            <h2>Acerca de Nosotros</h2>
+            <p>
+                En <strong class="name_com">TeeGomix</strong>, nos dedicamos a ofrecer las mejores camisetas y buzos con
+                diseños únicos y personalizados. Nos apasiona que nuestros clientes puedan expresar su estilo y
+                personalidad a través de lo que visten, por eso, nos especializamos en crear prendas que reflejen su
+                identidad. Cada uno de nuestros productos está diseñado con cuidado y atención al detalle, asegurándonos
+                de que nuestros clientes reciban algo que sea cómodo y auténtico.
+                <br><br>
+
+                Nos enfocamos en brindar una experiencia inigualable, donde tú eres quien elige el mejor estilo. Además
+                de nuestros diseños, ofrecemos opciones de personalización para cada camiseta o buzo que elijas. Puedes
+                elegir desde el color, el material, hasta el diseño, todo depende de tu imaginación, nosotros nos
+                encargamos de colocarlo a tu alcance.
+                <br><br>
+
+                En nombre de TeeGomix podemos decir que tenemos todo lo que necesitas. Estamos seguros de que cada
+                prenda se debe adaptar a ti, no solo en estilo, sino también en el confort y ajuste.
+            </p>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.88/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="Controller/main_controller.js"></script>
+
+</body>
+
+</html>
