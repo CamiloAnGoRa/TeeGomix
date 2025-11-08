@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (customRequestBtn) {
         customRequestBtn.addEventListener("click", () => {
-            showNotification("Redirigiendo a formulario de personalización...");
+            showNotification("📧 Redirigiendo a formulario de personalización...");
             
             // Aquí podrías abrir un modal o redirigir
             setTimeout(() => {
@@ -344,17 +344,38 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.head.appendChild(style);
 
-    // ==================== SCROLL SUAVE EN HERO ====================
+    // ==================== SCROLL EN HERO Y CATEGORÍAS ====================
     const heroBtn = document.querySelector(".btn-hero");
     
     if (heroBtn) {
         heroBtn.addEventListener("click", () => {
-            const productsSection = document.getElementById("camisetas");
-            if (productsSection) {
-                productsSection.scrollIntoView({ behavior: "smooth" });
+            const categoriesSection = document.querySelector(".hero-categories");
+            if (categoriesSection) {
+                categoriesSection.scrollIntoView({ behavior: "smooth", block: "start" });
             }
         });
     }
 
-    console.log("Catálogo TeeGomix cargado correctamente");
+    const categoryBtns = document.querySelectorAll(".btn-category");
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const category = btn.getAttribute("data-category");
+            const targetSection = document.getElementById(category);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                
+                // Actualizar nav activo
+                navLinks.forEach(link => {
+                    if (link.getAttribute("href") === `#${category}`) {
+                        navLinks.forEach(l => l.classList.remove("active"));
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    });
+
+    console.log("🎨 Catálogo TeeGomix cargado correctamente");
 });

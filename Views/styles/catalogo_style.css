@@ -262,6 +262,27 @@ body {
     flex-shrink: 0;
 }
 
+.color-black {
+    background: #000000;
+}
+
+.color-white {
+    background: #ffffff;
+    border: 1px solid #333333;
+}
+
+.color-blue {
+    background: #00BFFF;
+}
+
+.color-red {
+    background: #ff0000;
+}
+
+.color-green {
+    background: #00ff00;
+}
+
 .checkbox-option {
     display: flex;
     flex-direction: row;
@@ -414,9 +435,112 @@ body {
     filter: drop-shadow(0 0 30px rgba(0, 191, 255, 0.5));
 }
 
+/* ==================== HERO CATEGORÍAS ==================== */
+.hero-categories {
+    padding: 3rem 0 4rem;
+    text-align: center;
+}
+
+.categories-title {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--color-blue), var(--color-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.categories-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-silver);
+    margin-bottom: 3rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-blue);
+    box-shadow: 0 10px 40px rgba(0, 191, 255, 0.3);
+}
+
+.category-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(102, 0, 197, 0.1));
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.1);
+}
+
+.category-content {
+    padding: 2rem;
+}
+
+.category-content h3 {
+    font-size: 1.8rem;
+    color: var(--color-blue);
+    margin-bottom: 0.5rem;
+}
+
+.category-content p {
+    color: var(--color-silver);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.btn-category {
+    background: linear-gradient(90deg, var(--color-blue), var(--color-purple));
+    color: var(--color-white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-category:hover {
+    box-shadow: var(--shadow-blue);
+    transform: scale(1.05);
+}
+
 /* ==================== PRODUCTOS GRID ==================== */
 .products-section {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 191, 255, 0.1);
+}
+
+.products-section:last-of-type {
+    border-bottom: none;
 }
 
 .products-section h2 {
@@ -464,17 +588,25 @@ body {
 .card-front {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(0, 191, 255, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
 .card-front img {
     width: 100%;
     height: 70%;
     object-fit: cover;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .product-overlay {
     padding: 1rem;
     background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.9));
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .product-overlay h3 {
@@ -733,6 +865,7 @@ body {
     .hero-product {
         flex-direction: column;
         text-align: center;
+        padding: 2rem;
     }
 
     .hero-content,
@@ -742,6 +875,27 @@ body {
 
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+
+    .hero-categories {
+        padding: 2rem 0;
+    }
+
+    .categories-title {
+        font-size: 2rem;
+    }
+
+    .categories-subtitle {
+        font-size: 1rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .category-image {
+        height: 200px;
     }
 }
 

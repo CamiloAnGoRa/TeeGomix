@@ -27,7 +27,11 @@
             </a>
             <a href="#sacos" class="nav-link">
                 <span class="icon">🧥</span>
-                SACOS
+                BUZOS
+            </a>
+            <a href="#conjuntos" class="nav-link">
+                <span class="icon">👔</span>
+                CONJUNTOS
             </a>
             <a href="#personalizados" class="nav-link">
                 <span class="icon">✨</span>
@@ -80,27 +84,27 @@
             <div class="color-filters">
                 <label class="color-option">
                     <input type="checkbox" value="negro">
-                    <span class="color-circle" style="background: #000;"></span>
+                    <span class="color-circle color-black"></span>
                     Negro
                 </label>
                 <label class="color-option">
                     <input type="checkbox" value="blanco">
-                    <span class="color-circle" style="background: #fff; border: 1px solid #333;"></span>
+                    <span class="color-circle color-white"></span>
                     Blanco
                 </label>
                 <label class="color-option">
                     <input type="checkbox" value="azul">
-                    <span class="color-circle" style="background: #00BFFF;"></span>
+                    <span class="color-circle color-blue"></span>
                     Azul
                 </label>
                 <label class="color-option">
                     <input type="checkbox" value="rojo">
-                    <span class="color-circle" style="background: #ff0000;"></span>
+                    <span class="color-circle color-red"></span>
                     Rojo
                 </label>
                 <label class="color-option">
                     <input type="checkbox" value="verde">
-                    <span class="color-circle" style="background: #00ff00;"></span>
+                    <span class="color-circle color-green"></span>
                     Verde
                 </label>
             </div>
@@ -113,12 +117,12 @@
                 <span class="checkbox-text">Algodón</span>
             </label>
             <label class="checkbox-option">
-                <input type="checkbox" value="poliester">
-                <span class="checkbox-text">Poliéster</span>
+                <input type="checkbox" value="burda">
+                <span class="checkbox-text">Burda</span>
             </label>
             <label class="checkbox-option">
-                <input type="checkbox" value="mezcla">
-                <span class="checkbox-text">Mezcla</span>
+                <input type="checkbox" value="Tela Galleta">
+                <span class="checkbox-text">Tela Galleta</span>
             </label>
         </div>
 
@@ -149,19 +153,63 @@
         <section class="hero-product" data-aos="fade-up">
             <div class="hero-content">
                 <span class="hero-badge">⭐ TENDENCIA DE LA SEMANA</span>
-                <h1>Coleccion Urbana - Geek</h1>
+                <h1>URBAN COLLECTION</h1>
                 <p>Diseños exclusivos que definen tu personalidad</p>
                 <button class="btn-hero">Explorar Ahora</button>
             </div>
             <div class="hero-image">
-                <!-- AQUÍ VA TU IMAGEN DEL PRODUCTO TENDENCIA -->
+                
                 <img src="../Assets/Images/Camisetas/hero.jpg" alt="Producto Tendencia">
             </div>
         </section>
 
-        <!-- PRODUCTOS VARIADOS -->
+        <!-- CATEGORÍAS PRINCIPALES -->
+        <section class="hero-categories" data-aos="fade-up">
+            <h2 class="categories-title">Explora Nuestras Colecciones</h2>
+            <p class="categories-subtitle">Descubre el estilo que te define</p>
+            
+            <div class="categories-grid">
+                <!-- CAMISETAS -->
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="category-image">
+                        <img src="../Assets/Images/Camisetas/Camiseta_Seccion.jpg" alt="Camisetas">
+                    </div>
+                    <div class="category-content">
+                        <h3>Camisetas</h3>
+                        <p>Diseños únicos y personalizables</p>
+                        <button class="btn-category" data-category="camisetas">Ver Colección</button>
+                    </div>
+                </div>
+
+                <!-- BUZOS -->
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="category-image">
+                        <img src="../Assets/Images/Buzos/Buzo_Seccion.jpg" alt="Buzos">
+                    </div>
+                    <div class="category-content">
+                        <h3>Buzos</h3>
+                        <p>Comodidad y estilo urbano</p>
+                        <button class="btn-category" data-category="sacos">Ver Colección</button>
+                    </div>
+                </div>
+
+                <!-- CONJUNTOS -->
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="category-image">
+                        <img src="../Assets/Images/Conjuntos/Conjuntos_Seccion.jpg" alt="Conjuntos">
+                    </div>
+                    <div class="category-content">
+                        <h3>Conjuntos</h3>
+                        <p>Looks completos y coordinados</p>
+                        <button class="btn-category" data-category="conjuntos">Ver Colección</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS VARIADOS - CAMISETAS -->
         <section class="products-section" id="camisetas">
-            <h2 data-aos="fade-right">Nuestros Productos</h2>
+            <h2 data-aos="fade-right">Camisetas</h2>
             
             <div class="products-grid">
                 <!-- TARJETA 1 -->
@@ -169,22 +217,22 @@
                     <div class="card-inner">
                         <!-- FRENTE -->
                         <div class="card-front">
-                            <img src="../Assets/Images/Camisetas/Dandadan2_2025_TG.png" alt="Producto 1">
+                            <img src="../Assets/Images/Camisetas/Mascara_Oni_2025_TG.png" alt="Producto 1">
                             <div class="product-overlay">
-                                <h3>Camiseta Anime</h3>
-                                <p class="price">$45,000</p>
+                                <h3>Camiseta Oni</h3>
+                                <p class="price">$50,000</p>
                             </div>
                         </div>
                         <!-- REVERSO -->
                         <div class="card-back">
-                            <h3>Camiseta Anime</h3>
+                            <h3>Camiseta Oni</h3>
                             <p class="specs">
-                                • Material: Algodón 100%<br>
-                                • Tallas: S, M, L, XL<br>
-                                • Colores: Negro, Blanco<br>
+                                • Material: Algodón 180g, Burda, Tela Galleta<br>
+                                • Tallas: S, M, L, XL, OVERSIZE<br>
+                                • Colores: Varios<br>
                                 • Personalizable: Sí
                             </p>
-                            <p class="price-detail">$45,000 COP</p>
+                            <p class="price-detail">$50,000 COP</p>
                             <div class="card-actions">
                                 <button class="btn-add-cart">🛒 Añadir</button>
                                 <button class="btn-favorite">❤️</button>
@@ -197,18 +245,54 @@
                 <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="../Assets/Images/Camisetas/Dandadan_2025_TG.png" alt="Producto 2">
+                            <img src="../Assets/Images/Camisetas/Oso_Neon_2025_TG.png" alt="Producto 2">
                             <div class="product-overlay">
-                                <h3>Camiseta Anime V2</h3>
+                                <h3>Camiseta Oso Neon</h3>
+                                <p class="price">$50,000</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Camiseta Oso Neon</h3>
+                            <p class="specs">
+                                • Material: Algodón 180g, Burda, Tela Galleta<br>
+                                • Tallas: S, M, L, XL, OVERSIZE<br>
+                                • Colores: Varios<br>
+                                • Personalizable: Sí
+                            </p>
+                            <p class="price-detail">$50,000 COP</p>
+                            <div class="card-actions">
+                                <button class="btn-add-cart">🛒 Añadir</button>
+                                <button class="btn-favorite">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agrega más camisetas aquí -->
+            </div>
+        </section>
+
+        <!-- SACOS Y HOODIES -->
+        <section class="products-section" id="sacos">
+            <h2 data-aos="fade-right">Sacos & Hoodies</h2>
+            
+            <div class="products-grid">
+                <!-- TARJETA 1 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="../Assets/Images/Buzos/Buzo_1.jpg" alt="Producto 3">
+                            <div class="product-overlay">
+                                <h3>Buzo Classic</h3>
                                 <p class="price">$85,000</p>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h3>Camiseta Anime V2</h3>
+                            <h3>Buzo Classic</h3>
                             <p class="specs">
-                                • Material: Mezcla Premium<br>
+                                • Material: Algodon Perchado<br>
                                 • Tallas: S, M, L, XL<br>
-                                • Colores: Negro, Gris<br>
+                                • Colores: Variados<br>
                                 • Personalizable: Sí
                             </p>
                             <p class="price-detail">$85,000 COP</p>
@@ -220,23 +304,23 @@
                     </div>
                 </div>
 
-                <!-- TARJETA 3 -->
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                <!-- TARJETA 2 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="../Assets/Images/Camisetas/Gato_2025_TG.png" alt="Producto 3">
+                            <img src="../Assets/Images/Buzos/Buzo_2.jpg" alt="Producto 4">
                             <div class="product-overlay">
-                                <h3>Camiseta Oversize</h3>
+                                <h3>Buzo Classic NASA</h3>
                                 <p class="price">$120,000</p>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h3>Camiseta Oversize</h3>
+                            <h3>Buzo Classic NASA</h3>
                             <p class="specs">
-                                • Material: Poliéster<br>
+                                • Material: Algodon Premium<br>
                                 • Tallas: M, L, XL<br>
-                                • Colores: Negro, Azul<br>
-                                • Personalizable: No
+                                • Colores: Variado<br>
+                                • Personalizable: Si
                             </p>
                             <p class="price-detail">$120,000 COP</p>
                             <div class="card-actions">
@@ -247,25 +331,34 @@
                     </div>
                 </div>
 
-                <!-- TARJETA 4 -->
-                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+                <!-- Agrega más sacos aquí -->
+            </div>
+        </section>
+
+        <!-- CONJUNTOS -->
+        <section class="products-section" id="conjuntos">
+            <h2 data-aos="fade-right">Conjuntos</h2>
+            
+            <div class="products-grid">
+                <!-- TARJETA 1 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="../Assets/Images/Camisetas/Mario_2025_TG.png" alt="Producto 4">
+                            <img src="../Assets/Images/Conjuntos/Conjunto_1.jpg" alt="Conjunto 1">
                             <div class="product-overlay">
-                                <h3>Camiseta Básica</h3>
-                                <p class="price">$35,000</p>
+                                <h3>Conjunto Sudadera</h3>
+                                <p class="price">$150,000</p>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h3>Camiseta Básica</h3>
+                            <h3>Conjunto Sudadera</h3>
                             <p class="specs">
-                                • Material: Algodón<br>
-                                • Tallas: S, M, L, XL, XXL<br>
-                                • Colores: Varios<br>
+                                • Material: Algodon Premium<br>
+                                • Tallas: S, M, L, XL<br>
+                                • Incluye: Buzo + Jogger<br>
                                 • Personalizable: Sí
                             </p>
-                            <p class="price-detail">$35,000 COP</p>
+                            <p class="price-detail">$150,000 COP</p>
                             <div class="card-actions">
                                 <button class="btn-add-cart">🛒 Añadir</button>
                                 <button class="btn-favorite">❤️</button>
@@ -274,7 +367,34 @@
                     </div>
                 </div>
 
-                <!-- Agrega más tarjetas según necesites -->
+                <!-- TARJETA 2 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="../Assets/Images/Conjuntos/Conjunto_2.jpg" alt="Conjunto 2">
+                            <div class="product-overlay">
+                                <h3>Conjunto Negro - Azul</h3>
+                                <p class="price">$180,000</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Conjunto Negro - Azul</h3>
+                            <p class="specs">
+                                • Material: Algodon Perchado<br>
+                                • Tallas: M, L, XL<br>
+                                • Incluye: Buzo + Jogger<br>
+                                • Personalizable: Sí
+                            </p>
+                            <p class="price-detail">$180,000 COP</p>
+                            <div class="card-actions">
+                                <button class="btn-add-cart">🛒 Añadir</button>
+                                <button class="btn-favorite">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agrega más conjuntos aquí -->
             </div>
         </section>
 
@@ -286,28 +406,28 @@
             <div class="custom-grid">
                 <!-- CUSTOM 1 -->
                 <div class="custom-card" data-aos="flip-left" data-aos-delay="100">
-                    <img src="../Assets/Images/Camisetas/Oso_Neon_2025_TG.png" alt="Personalizado 1">
+                    <img src="../Assets/Images/Camisetas/Tigre_2025_TG.png" alt="Personalizado 1">
                     <div class="custom-overlay">
-                        <h4>Proyecto Corporativo</h4>
-                        <p>Diseño exclusivo para empresa</p>
+                        <h4>Diseños personales</h4>
+                        <p>Diseño para el diario</p>
                     </div>
                 </div>
 
                 <!-- CUSTOM 2 -->
                 <div class="custom-card" data-aos="flip-left" data-aos-delay="200">
-                    <img src="../Assets/Images/Camisetas/Tigre_2025_TG.png" alt="Personalizado 2">
+                    <img src="../Assets/Images/Camisetas/Mario_2025_TG.png" alt="Personalizado 2">
                     <div class="custom-overlay">
-                        <h4>Colección Limitada</h4>
+                        <h4>Diseños Animados</h4>
                         <p>Serie especial de 50 unidades</p>
                     </div>
                 </div>
 
                 <!-- CUSTOM 3 -->
                 <div class="custom-card" data-aos="flip-left" data-aos-delay="300">
-                    <img src="../Assets/Images/Camisetas/Yoshi_2025_TG.png" alt="Personalizado 3">
+                    <img src="../Assets/Images/Camisetas/Dandadan_2025_TG.png" alt="Personalizado 3">
                     <div class="custom-overlay">
                         <h4>Evento Geek</h4>
-                        <p>Culturas Geeks</p>
+                        <p>Camiseta para evento Geek</p>
                     </div>
                 </div>
 
@@ -316,7 +436,7 @@
                     <img src="../Assets/Images/Camisetas/Mascara_Oni_2025_TG.png" alt="Personalizado 4">
                     <div class="custom-overlay">
                         <h4>Edición Artista</h4>
-                        <p>Colaboración especial</p>
+                        <p>Para presentacion</p>
                     </div>
                 </div>
             </div>
@@ -356,7 +476,7 @@
             <div class="footer-section">
                 <h4>Síguenos</h4>
                 <div class="social-links">
-                    <a href="#" class="social-icon">📷 Instagram</a>
+                    <a href="https://www.instagram.com/teegomix_official?igsh=MTBkbml1c2toZjI2NA==" target="_blank" class="social-icon">📷 Instagram</a>
                 </div>
             </div>
         </div>
