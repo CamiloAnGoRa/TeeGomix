@@ -243,27 +243,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==================== CARRITO Y FAVORITOS ====================
     if (cartBtn) {
         cartBtn.addEventListener("click", () => {
-            if (cartItems.length === 0) {
-                showNotification("🛒 Tu carrito está vacío");
-            } else {
-                console.log("Ver carrito:", cartItems);
-                showNotification(`🛒 Tienes ${cartItems.length} productos en el carrito`);
-                // Aquí podrías abrir un modal con el carrito
-                // openCartModal();
-            }
+            showNotification("🛒 Redirigiendo al carrito ...");
+
+            //Redirigir a carrito.html
+            setTimeout(()=> {
+                window.location.href = "../Views/carrito.html";
+            }, 500); //Retraso para que salga la notificacion de redireccion
         });
     }
     
     if (favBtn) {
         favBtn.addEventListener("click", () => {
-            if (favoriteItems.length === 0) {
-                showNotification("❤️ No tienes favoritos aún");
-            } else {
-                console.log("Ver favoritos:", favoriteItems);
-                showNotification(`❤️ Tienes ${favoriteItems.length} productos favoritos`);
-                // Aquí podrías abrir un modal con favoritos
-                // openFavoritesModal();
-            }
+            showNotification("❤️ Redirigiendo a favoritos...");
+            
+            //Redirigir a favoritos.html
+            setTimeout(() => {
+                window.location.href = "../Views/favorito.html";
+            }, 500) //Retraso para que salga la notificacion de redireccion
         });
     }
 
