@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | TeeGomix</title>
+    <link rel="stylesheet" href="styles/carrito_style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="../Assets/Images/Ner_Logo_R_Bag.png" type="image/png">
+</head>
+
+<body>
+    <!-- Imagen de gradiente de fondo -->
+    <img class="image-gradient" src="../Assets/Images/gradient.png" alt="gradient">
+
+    <!-- HEADER FIJO -->
+    <header class="cart-header">
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
+
+        <nav class="cart-nav">
+            <a href="catalogo.html" class="nav-link">
+                <span class="icon">🏠</span>
+                Catálogo
+            </a>
+            <a href="carrito.html" class="nav-link active">
+                <span class="icon">🛒</span>
+                Carrito
+            </a>
+            <a href="favorito.html" class="nav-link">
+                <span class="icon">❤️</span>
+                Favoritos
+            </a>
+        </nav>
+
+        <button class="btn-logout" id="logout-btn">Cerrar Sesión</button>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="cart-main">
+        <div class="cart-container">
+            <h1 data-aos="fade-right">Tu Carrito de Compras</h1>
+
+            <!-- PRODUCTOS EN EL CARRITO -->
+            <div class="cart-content" id="cart-items">
+
+                <!-- ITEM 1 -->
+                <div class="cart-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="item-image">
+                        <img src="../Assets/Images/Camisetas/Tigre_2025_TG.png" alt="Producto 1">
+                    </div>
+                    <div class="item-details">
+                        <h2>Diseño Personalizado</h2>
+                        <p class="item-specs">
+                            <span class="spec-label">Material:</span> Algodón 100%<br>
+                            <span class="spec-label">Talla:</span> M<br>
+                            <span class="spec-label">Color:</span> Negro
+                        </p>
+                        <p class="item-price">$50,000 <span class="currency">COP</span></p>
+
+                        <div class="item-actions">
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10" readonly>
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="btn-remove">
+                                🗑️ Eliminar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="cart-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="item-image">
+                        <img src="../Assets/Images/Camisetas/Oso_Neon_2025_TG.png" alt="Producto 3">
+                    </div>
+                    <div class="item-details">
+                        <h2>Camiseta Oso Neon</h2>
+                        <p class="item-specs">
+                            <span class="spec-label">Material:</span> Algodon Premium<br>
+                            <span class="spec-label">Talla:</span> L<br>
+                            <span class="spec-label">Color:</span> Negro
+                        </p>
+                        <p class="item-price">$55,000 <span class="currency">COP</span></p>
+
+                        <div class="item-actions">
+                            <div class="quantity-control">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" class="qty-input" value="2" min="1" max="10" readonly>
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="btn-remove">
+                                🗑️ Eliminar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CARRITO VACÍO (Oculto por defecto) -->
+            <div class="empty-cart" id="empty-cart" style="display: none;">
+                <div class="empty-icon">🛒</div>
+                <h2>Tu carrito está vacío</h2>
+                <p>Agrega productos desde nuestro catálogo</p>
+                <a href="catalogo.html" class="btn-shop">Ir a Comprar</a>
+            </div>
+
+        </div>
+
+        <!-- RESUMEN DE COMPRA -->
+        <aside class="cart-summary" data-aos="fade-left">
+            <h2>Resumen de Compra</h2>
+
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$215,000</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Envío:</span>
+                <span id="shipping">$15,000</span>
+            </div>
+
+            <div class="summary-row">
+                <span>IVA (19%):</span>
+                <span id="tax">$40,850</span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="total">$270,850</span>
+            </div>
+
+            <button class="btn-checkout" id="checkout-btn">
+                Generar Orden de Compra
+            </button>
+
+            <button class="btn-continue" id="continue-shopping">
+                Continuar Comprando
+            </button>
+
+            <div class="payment-methods">
+                <p>Métodos de pago aceptados:</p>
+                <div class="payment-icons">
+                    <span>💳</span>
+                    <span>🏦</span>
+                    <span>📱</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="../Controller/carrito_controller.js"></script>
+</body>
+
+</html>

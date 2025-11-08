@@ -1,0 +1,334 @@
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-blue: #00BFFF;
+    --color-purple: #6600c5;
+    --color-purple-dark: #5300a0;
+    --color-grey: #808080;
+    --color-silver: #a7a7a7;
+    --color-neon: #00e0ff;
+    --shadow-blue: 0 0 15px var(--color-blue);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.image-gradient {
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ==================== HEADER ==================== */
+.favorites-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+}
+
+.logo {
+    width: 180px;
+    height: 70px;
+    background-image: url(../../Assets/Images/TeeGomix.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 6px var(--color-white));
+}
+
+.favorites-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link .icon {
+    font-size: 1.2rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(0, 191, 255, 0.1);
+    color: var(--color-blue);
+    transform: translateY(-2px);
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid var(--color-purple);
+    color: var(--color-purple);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: var(--color-purple);
+    color: var(--color-white);
+    box-shadow: 0 0 15px var(--color-purple);
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.favorites-main {
+    margin-top: 120px;
+    padding: 2rem 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.favorites-header-text {
+    margin-bottom: 3rem;
+}
+
+.favorites-header-text h1 {
+    font-size: 2.5rem;
+    color: var(--color-blue);
+    margin-bottom: 0.5rem;
+    text-shadow: var(--shadow-blue);
+}
+
+.favorites-header-text p {
+    color: var(--color-silver);
+    font-size: 1.1rem;
+}
+
+#favorites-count {
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+/* ==================== GRID ESTILO INSTAGRAM ==================== */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.favorite-item {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.favorite-item:hover {
+    transform: scale(0.98);
+}
+
+.favorite-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.favorite-item:hover .favorite-image img {
+    transform: scale(1.05);
+}
+
+/* ==================== OVERLAY (Aparece en hover) ==================== */
+.favorite-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.favorite-item:hover .favorite-overlay {
+    opacity: 1;
+}
+
+.favorite-overlay h3 {
+    color: var(--color-blue);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.favorite-price {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* ==================== BOTONES DE ACCIÓN ==================== */
+.favorite-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-add-to-cart,
+.btn-remove-favorite {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-add-to-cart {
+    background: var(--color-blue);
+    color: var(--color-black);
+}
+
+.btn-add-to-cart:hover {
+    background: var(--color-white);
+    box-shadow: var(--shadow-blue);
+    transform: translateY(-2px);
+}
+
+.btn-remove-favorite {
+    background: rgba(255, 0, 0, 0.8);
+    color: var(--color-white);
+}
+
+.btn-remove-favorite:hover {
+    background: #ff0000;
+    transform: translateY(-2px);
+}
+
+/* ==================== FAVORITOS VACÍO ==================== */
+.empty-favorites {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(0, 191, 255, 0.3);
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.empty-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-favorites h2 {
+    color: var(--color-silver);
+    margin-bottom: 0.5rem;
+}
+
+.empty-favorites p {
+    color: var(--color-grey);
+    margin-bottom: 2rem;
+}
+
+.btn-shop {
+    background: var(--color-blue);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+    box-shadow: var(--shadow-blue);
+    transform: scale(1.05);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .favorites-header {
+        padding: 1rem;
+    }
+
+    .favorites-nav {
+        display: none;
+    }
+
+    .favorites-main {
+        padding: 1rem;
+        margin-top: 100px;
+    }
+
+    .favorites-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .favorite-overlay h3 {
+        font-size: 1rem;
+    }
+
+    .favorite-price {
+        font-size: 1.2rem;
+    }
+
+    .favorite-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn-add-to-cart,
+    .btn-remove-favorite {
+        font-size: 1.2rem;
+        padding: 0.6rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .favorites-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
